@@ -46,7 +46,7 @@
     "publisher": "Peer2Profit",
     "official_url": "https://peer2profit.app",
     "tos_url": "N/A",
-    "status": "discontinued",
+    "status": "deprecated",
     "removal_history": "Docker Hub image was pulled (GitHub issue #56). Website has been down. Service fully discontinued.",
     "device_limits": {
       "max_devices_per_account": "N/A",

@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-05-15T22:25:16Z",
+  "generated_at": "2026-05-15T22:43:51Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": [
@@ -125,6 +125,228 @@
           "enabled": false,
           "uuid": "sdk-node-yourEARNAPPDeviceUUID"
         }
+      },
+      {
+        "name": "GAGANODE",
+        "dashboard": "https://www.gaganode.com/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_gaganode",
+          "hostname": "${DEVICE_NAME}_gaganode",
+          "image": "xterna/gaga-node",
+          "environment": [
+            "TOKEN=${GAGANODE_TOKEN}"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_MEDIUM}",
+          "mem_reservation": "${APP_MEM_RESERV_MEDIUM}",
+          "mem_limit": "${APP_MEM_LIMIT_MEDIUM}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "healthcheck": {
+            "test": [
+              "CMD-SHELL",
+              "pgrep -f gaga || exit 1"
+            ],
+            "interval": "120s",
+            "timeout": "10s",
+            "retries": 3,
+            "start_period": "60s"
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "token": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "GaGaNode",
+          "publisher": "GaGaNode",
+          "official_url": "https://www.gaganode.com",
+          "tos_url": "undocumented",
+          "status": "active",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Decentralized edge cloud platform. No hard limits documented."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": "undocumented",
+            "vps": "undocumented",
+            "vpn": "undocumented",
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": true,
+            "last_update": "2024-10"
+          },
+          "earnings": {
+            "model": "per-GB/task (GaGa token)",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "GaGa token (crypto)"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "Community Docker image only \u2014 no official container verified",
+            "Requires deeper research before promoting to supported"
+          ],
+          "confidence": "low",
+          "sources": [
+            "https://www.gaganode.com",
+            "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+          ],
+          "last_verified": "2026-03-23",
+          "compose_layer_reasoning": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear. Conservative residential classification.",
+          "install_limit_reasoning": "No documented device caps. Decentralized platform.",
+          "recommendation": "promoted",
+          "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
+          "confidence_notes": "Limited external validation. Requires deeper research before promoting to supported."
+        },
+        "referrals": [
+          {
+            "url": "https://www.gaganode.com",
+            "contributor": "MRColorR"
+          }
+        ],
+        "user_config_template": {
+          "enabled": false,
+          "token": "yourGAGANODEToken"
+        }
+      },
+      {
+        "name": "SPIDE",
+        "dashboard": "https://spide.network/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_spide",
+          "hostname": "${DEVICE_NAME}_spide",
+          "image": "xterna/spide-network",
+          "environment": [
+            "ID=${SPIDE_MACHINE_ID}"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_MEDIUM}",
+          "mem_reservation": "${APP_MEM_RESERV_MEDIUM}",
+          "mem_limit": "${APP_MEM_LIMIT_MEDIUM}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "healthcheck": {
+            "test": [
+              "CMD-SHELL",
+              "pgrep -f spide || exit 1"
+            ],
+            "interval": "120s",
+            "timeout": "10s",
+            "retries": 3,
+            "start_period": "60s"
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "machine_id": {
+            "length": 32,
+            "claimURLBase": "After starting, run 'docker logs <container> 2>&1 | grep \"Device Key\"' to get your device key. Register it at the Spide dashboard."
+          }
+        },
+        "install_limit": -1,
+        "compose_layer": "universal",
+        "app_details": {
+          "official_name": "Spide Network",
+          "publisher": "Spide",
+          "official_url": "https://spide.network",
+          "tos_url": "undocumented",
+          "status": "active",
+          "device_limits": {
+            "max_devices_per_account": "unlimited",
+            "max_devices_per_ip": 1,
+            "max_ips_per_account": "unlimited",
+            "notes": "Requires machine ID to regenerate device keys. Designed for multi-node deployments."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": true,
+            "vps": true,
+            "vpn": "undocumented",
+            "proxy": "undocumented",
+            "mobile": true,
+            "adjacent_ips_accepted": true,
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Payout rates vary by IP type. Verified support for residential, Linux, and Docker on multiple IP types."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": true,
+            "last_update": "2024-10"
+          },
+          "earnings": {
+            "model": "per-GB",
+            "min_payout": "$20",
+            "payout_methods": [
+              "PayPal",
+              "crypto"
+            ],
+            "avg_monthly_residential_usd": "unknown (early stage)",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "confidence": "medium",
+          "sources": [
+            "https://github.com/XternA/spide-network",
+            "https://www.reddit.com/r/passive_income/comments/1q5dazd/"
+          ],
+          "last_verified": "2026-03-23",
+          "compose_layer_reasoning": "Verified support for residential, Linux, and Docker on multiple IP types. Payout rates vary by IP type.",
+          "install_limit_reasoning": "Designed for multi-node deployments. Requires machine ID to regenerate device keys.",
+          "recommendation": "promoted",
+          "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
+          "confidence_notes": "Community tests confirm functionality, but it is early-stage."
+        },
+        "referrals": [
+          {
+            "url": "https://spide.network",
+            "contributor": "MRColorR"
+          }
+        ],
+        "user_config_template": {
+          "enabled": false,
+          "machine_id": "yourSPIDEMachineID"
+        }
       }
     ]
   },
@@ -247,6 +469,129 @@
             5000
           ]
         }
+      },
+      {
+        "name": "GRADIENT",
+        "dashboard": "https://app.gradient.network/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_gradient",
+          "hostname": "${DEVICE_NAME}_gradient",
+          "image": "carbon2029/dockweb:latest",
+          "environment": [
+            "GRADIENT_EMAIL=$GRADIENT_EMAIL",
+            "GRADIENT_PASS=$GRADIENT_PASSWORD"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "volumes": [
+            ".data/.gradient:/app/chrome_user_data"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "healthcheck": {
+            "test": [
+              "CMD-SHELL",
+              "pgrep -f chrom || exit 1"
+            ],
+            "interval": "120s",
+            "timeout": "10s",
+            "retries": 5,
+            "start_period": "90s"
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "email": {},
+          "password": {}
+        },
+        "install_limit": 1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Gradient",
+          "publisher": "Gradient Network (Singapore)",
+          "official_url": "https://gradient.network",
+          "tos_url": "https://gradient.network/terms",
+          "status": "deprecated",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Gradient pivoted significantly toward AI infrastructure (Lattica/Parallax protocols) after raising $10M in June 2025. Sentry Node Open Beta concluded. Bandwidth-sharing product status unclear."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": "partial",
+            "vps": "partial",
+            "vpn": false,
+            "proxy": false,
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Sentry nodes used for connectivity mapping, Parallax nodes for GPU/RAM inference. Original product was browser-extension based \u2014 fundamentally incompatible with headless Docker."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "points-based (Taps)",
+            "min_payout": "Token airdrop pending",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "Company pivoted to AI infrastructure (Parallax) \u2014 bandwidth node future uncertain",
+            "Third-party Docker image (carbon2029/dockweb) not maintained by Gradient",
+            "Same image shared with Dawn and Teneo \u2014 reliability concerns",
+            "No official Docker image exists",
+            "Sentry Node Open Beta has concluded"
+          ],
+          "confidence": "low",
+          "sources": [
+            "https://gradient.network",
+            "https://docs.gradient.network/",
+            "https://gradient.network/blog/parallax-the-sovereign-ai-os"
+          ],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "The 'Sentry Node' product is primarily browser-extension based for residential connectivity. Parallax AI pivot moves toward compute, not bandwidth.",
+          "install_limit_reasoning": "Primarily a liveness mapping tool; multiple instances per IP offer diminishing utility. Conservative 1-instance limit applied due to instability.",
+          "recommendation": "re-evaluate",
+          "recommendation_reasoning": "Core product is now Parallax AI. Sentry Node is in transition. Third-party browser-wrapper image (carbon2029/dockweb) is unreliable. Consider deprecation.",
+          "confidence_notes": "Official AI pivot documented in June 2025. Sentry Node Open Beta concluded. No official Docker image exists.",
+          "removal_history": "Removed 2026-05-15 after parent company pivoted to Parallax AI infrastructure. Sentry Node Open Beta concluded; bandwidth-sharing product no longer viable. Third-party image carbon2029/dockweb (shared with Dawn/Teneo) was the only Docker route and is unreliable."
+        },
+        "referrals": [
+          {
+            "url": "https://app.gradient.network/signup?code=9WOBKP",
+            "contributor": "MRColorR"
+          }
+        ],
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourGRADIENTMail",
+          "password": "yourGRADIENTPw"
+        },
+        "additional_details": "AI pivot to Parallax \u2014 Sentry Node bandwidth product superseded"
       },
       {
         "name": "GRASS",
@@ -399,7 +744,7 @@
           "publisher": "Peer2Profit",
           "official_url": "https://peer2profit.app",
           "tos_url": "N/A",
-          "status": "discontinued",
+          "status": "deprecated",
           "removal_history": "Docker Hub image was pulled (GitHub issue #56). Website has been down. Service fully discontinued.",
           "device_limits": {
             "max_devices_per_account": "N/A",
@@ -460,6 +805,118 @@
         }
       },
       {
+        "name": "PROXYBASE",
+        "dashboard": "https://peer.proxybase.org/",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_proxybase",
+          "hostname": "${DEVICE_NAME}_proxybase",
+          "image": "proxybase/proxybase:latest",
+          "environment": [
+            "USER_ID=$PROXYBASE_USERID",
+            "DEVICE_NAME=${DEVICE_NAME}"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "healthcheck": {
+            "test": [
+              "CMD-SHELL",
+              "pgrep -f proxybase || exit 1"
+            ],
+            "interval": "120s",
+            "timeout": "10s",
+            "retries": 3,
+            "start_period": "60s"
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "userid": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "datacenter",
+        "app_details": {
+          "official_name": "ProxyBase",
+          "publisher": "ProxyBase",
+          "official_url": "https://proxybase.com",
+          "tos_url": "undocumented",
+          "status": "deprecated",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Service reportedly moved domains. Very sparse documentation. No reliable information found in 2025-2026 research."
+          },
+          "ip_policy": {
+            "residential": "undocumented",
+            "datacenter": "undocumented",
+            "vps": "undocumented",
+            "vpn": "undocumented",
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "undocumented",
+            "quality_notes": "Insufficient data to assess IP policy."
+          },
+          "docker": {
+            "image_official": "unknown",
+            "image_maintained": "unknown",
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "undocumented",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "Domain instability \u2014 service may have moved or shut down",
+            "Zero accessible official documentation",
+            "Verify service is alive before deploying"
+          ],
+          "confidence": "low",
+          "sources": [],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Insufficient data to assess IP policy. Service domain instability prevents verification.",
+          "install_limit_reasoning": "Zero accessible official documentation. No verified limits exist.",
+          "recommendation": "re-evaluate",
+          "recommendation_reasoning": "Domain instability and zero documentation. Verify service is alive before deploying. Consider deprecation.",
+          "confidence_notes": "No accessible documentation or active service site found during research.",
+          "removal_history": "Removed 2026-05-15 due to domain instability. Service may have shut down or migrated; zero accessible documentation found in 2025-2026 research. No verifiable signal that the peer-program is still paying out."
+        },
+        "referrals": [
+          {
+            "url": "http://peer.proxybase.org/signup?ref=XfOz3zeURm",
+            "contributor": "MRColorR"
+          }
+        ],
+        "user_config_template": {
+          "enabled": false,
+          "userid": "yourPROXYBASEUserID"
+        },
+        "additional_details": "Domain instability \u2014 service may have shut down"
+      },
+      {
         "name": "SPEEDSHARE",
         "dashboard": "https://dashboard.speedshare.app/",
         "compose_config": {
@@ -497,7 +954,7 @@
           "publisher": "unknown",
           "official_url": "unknown",
           "tos_url": "N/A",
-          "status": "discontinued",
+          "status": "deprecated",
           "removal_history": "Removed due to service discontinuation and unreliable payouts.",
           "device_limits": {
             "max_devices_per_account": "N/A",
@@ -772,6 +1229,116 @@
             6080
           ]
         }
+      },
+      {
+        "name": "WIZARDGAIN",
+        "dashboard": "https://wizardgain.com/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_wizardgain",
+          "hostname": "${DEVICE_NAME}_wizardgain",
+          "image": "wizardgain/worker:latest",
+          "environment": [
+            "EMAIL=${WIZARDGAIN_EMAIL}"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_MEDIUM}",
+          "mem_reservation": "${APP_MEM_RESERV_MEDIUM}",
+          "mem_limit": "${APP_MEM_LIMIT_MEDIUM}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "healthcheck": {
+            "test": [
+              "CMD-SHELL",
+              "pgrep -f wizard || exit 1"
+            ],
+            "interval": "120s",
+            "timeout": "10s",
+            "retries": 3,
+            "start_period": "60s"
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "email": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "universal",
+        "app_details": {
+          "official_name": "WizardGain",
+          "publisher": "WizardGain",
+          "official_url": "https://wizardgain.com",
+          "tos_url": "undocumented",
+          "status": "deprecated",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": 1,
+            "max_ips_per_account": "undocumented",
+            "notes": "Limited documentation. Other projects support it."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": true,
+            "vps": true,
+            "vpn": "undocumented",
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Limited available documentation."
+          },
+          "docker": {
+            "image_official": true,
+            "image_maintained": true,
+            "last_update": "2025-12"
+          },
+          "earnings": {
+            "model": "per-GB",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "Reported 522 errors in community",
+            "Service stability unverified \u2014 use with caution"
+          ],
+          "confidence": "low",
+          "sources": [],
+          "last_verified": "2026-03-23",
+          "compose_layer_reasoning": "Limited available documentation. Supported on DC/VPS by other projects.",
+          "install_limit_reasoning": "Limited documentation. Other projects support it.",
+          "recommendation": "promoted",
+          "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
+          "confidence_notes": "Community reports service instability (522 errors).",
+          "removal_history": "Removed 2026-05-15 due to persistent HTTP 522 errors at the service backend. IGM also flags WizardGain as dead in their tracking. Image wizardgain/worker still publishes but the upstream service is unreliable."
+        },
+        "referrals": [
+          {
+            "url": "https://wizardgain.com",
+            "contributor": "MRColorR"
+          }
+        ],
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourWIZARDGAINMail"
+        },
+        "additional_details": "522 errors \u2014 service infrastructure unreliable"
       }
     ]
   },
