@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-04-24T11:18:36Z",
+  "generated_at": "2026-05-15T22:25:16Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": [
@@ -132,10 +132,682 @@
     "entries": []
   },
   "deprecated": {
-    "entries": []
+    "entries": [
+      {
+        "name": "DAWN",
+        "dashboard": "https://dawninternet.com",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_dawn",
+          "hostname": "${DEVICE_NAME}_dawn",
+          "image": "carbon2029/dockweb:latest",
+          "environment": [
+            "DAWN_EMAIL=$DAWN_EMAIL",
+            "DAWN_PASS=$DAWN_PASSWORD"
+          ],
+          "volumes": [
+            ".data/.dawn:/app/chrome_user_data"
+          ],
+          "ports": [
+            "${DAWN_PORT}:5000"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null,
+          "ports": null
+        },
+        "flags": {
+          "email": {},
+          "password": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Dawn Internet",
+          "publisher": "Dawn Internet",
+          "official_url": "https://dawninternet.com",
+          "tos_url": "undocumented",
+          "status": "deprecated",
+          "removal_history": "Moved to third-party image, unreliable service. Browser-extension product with no official Docker support.",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Originally a browser-extension product."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": "undocumented",
+            "vps": "undocumented",
+            "vpn": false,
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Primarily residential extension-based model."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "points -> token",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "No official Docker image \u2014 relies on third-party browser-container workaround",
+            "Third-party image shared with Teneo and Gradient"
+          ],
+          "confidence": "low",
+          "sources": [
+            "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+          ],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Browser-extension product. No official Docker support. Third-party browser-container workaround only.",
+          "install_limit_reasoning": "Browser extension model. Limits undocumented.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "No other project supports Dawn as a standalone app. carbon2029/dockweb is the only Docker approach and unreliable. Browser extension not suitable for headless Docker.",
+          "confidence_notes": "Absent from other known projects."
+        },
+        "referrals": [
+          {
+            "url": "https://dawninternet.com?code=xo23vynw",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Moved to third-party image, unreliable service",
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourDAWNMail",
+          "password": "yourDAWNPw",
+          "ports": [
+            5000
+          ]
+        }
+      },
+      {
+        "name": "GRASS",
+        "dashboard": "https://app.getgrass.io/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_grass",
+          "hostname": "${DEVICE_NAME}_grass",
+          "image": "ghcr.io/xterna/grass-node",
+          "environment": [
+            "USER_ID=$GRASS_USERID"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "userid": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Grass (Wynd Network)",
+          "publisher": "Wynd Network",
+          "official_url": "https://www.getgrass.io",
+          "tos_url": "https://www.getgrass.io/terms",
+          "status": "deprecated",
+          "removal_history": "Removed due to Docker image unavailability and service instability. No official Docker image exists. Significant VC backing but no official container as of 2026.",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Browser-extension primary architecture. No official Docker support as of March 2026."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": false,
+            "vps": false,
+            "vpn": false,
+            "proxy": false,
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Residential-only by design. VPN and datacenter IPs blocked. Evolved into major DePIN player on Solana."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": true,
+            "last_update": "2025"
+          },
+          "earnings": {
+            "model": "points -> GRASS token",
+            "min_payout": "varies (token)",
+            "payout_methods": [
+              "GRASS token (crypto)"
+            ],
+            "avg_monthly_residential_usd": "unknown (token-based)",
+            "avg_monthly_datacenter_usd": "N/A"
+          },
+          "warnings": [
+            "No official Docker image \u2014 community-maintained only",
+            "Worth monitoring \u2014 if official Docker image is released, reconsider"
+          ],
+          "confidence": "medium",
+          "sources": [
+            "https://www.getgrass.io",
+            "https://www.reddit.com/r/AirdropCryptoAlpha/comments/1i23595/"
+          ],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Residential-only by design. VPN and datacenter IPs blocked. Browser-extension primary architecture.",
+          "install_limit_reasoning": "No official Docker support. Browser extension model limits practical deployment.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "No official Docker image exists. Multiple third-party images exist (XternA websocket vs carbon2029 browser-wrapper). Worth monitoring for official Docker release.",
+          "confidence_notes": "Major DePIN player on Solana but no official container as of March 2026. Two different community approaches exist."
+        },
+        "referrals": [
+          {
+            "url": "https://app.getgrass.io/register/?referralCode=qyvJmxgNUhcLo2f",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Docker image unavailability / service instability",
+        "user_config_template": {
+          "enabled": false,
+          "userid": "yourGRASSUserID"
+        }
+      },
+      {
+        "name": "PEER2PROFIT",
+        "dashboard": "https://t.me/peer2profit_app_bot",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_peer2profit",
+          "hostname": "${DEVICE_NAME}_peer2profit",
+          "image": "xterna/peer2profit",
+          "environment": [
+            "P2P_EMAIL=$PEER2PROFIT_EMAIL"
+          ],
+          "ports": [
+            "5901:5900"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_HUGE}",
+          "mem_reservation": "${APP_MEM_RESERV_HUGE}",
+          "mem_limit": "${APP_MEM_LIMIT_HUGE}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          },
+          "platform": "linux/amd64"
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null,
+          "ports": null
+        },
+        "flags": {
+          "email": {},
+          "manual": {
+            "instructions": "Use any VNC client to connect to localhost:5901 using the password money4band and follow the onscreen instruction to complete the setup"
+          }
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Peer2Profit",
+          "publisher": "Peer2Profit",
+          "official_url": "https://peer2profit.app",
+          "tos_url": "N/A",
+          "status": "discontinued",
+          "removal_history": "Docker Hub image was pulled (GitHub issue #56). Website has been down. Service fully discontinued.",
+          "device_limits": {
+            "max_devices_per_account": "N/A",
+            "max_devices_per_ip": "N/A",
+            "max_ips_per_account": "N/A",
+            "notes": "Service discontinued. Website down. Docker Hub image pulled."
+          },
+          "ip_policy": {
+            "residential": "N/A",
+            "datacenter": "N/A",
+            "vps": "N/A",
+            "vpn": "N/A",
+            "proxy": "N/A",
+            "mobile": "N/A",
+            "adjacent_ips_accepted": "N/A",
+            "adjacent_ips_max": "N/A",
+            "ipv6": "N/A",
+            "geo_restrictions": "N/A",
+            "quality_notes": "N/A"
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "N/A",
+            "min_payout": "N/A",
+            "payout_methods": [],
+            "avg_monthly_residential_usd": "N/A",
+            "avg_monthly_datacenter_usd": "N/A"
+          },
+          "confidence": "high",
+          "sources": [
+            "https://www.youtube.com/watch?v=toiEukWY5O4",
+            "https://www.trustpilot.com/review/dashboard.peer2profit.app"
+          ],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Service discontinued. Website down. Docker Hub image pulled.",
+          "install_limit_reasoning": "Service discontinued.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "Docker Hub image was pulled. Website down. All three projects use different third-party images (mrcolorrain, xterna, enwaiax). Service is fully dead.",
+          "confidence_notes": "YouTube reports and Trustpilot reviews confirm service shutdown. Multiple community images exist but service backend is offline."
+        },
+        "referrals": [
+          {
+            "url": "https://t.me/peer2profit_app_bot?start=165849012262da8d0aa13c8",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Docker Hub image pulled (#56) / service discontinued",
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourPEER2PROFITMail",
+          "ports": [
+            5901
+          ]
+        }
+      },
+      {
+        "name": "SPEEDSHARE",
+        "dashboard": "https://dashboard.speedshare.app/",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_speedshare",
+          "hostname": "${DEVICE_NAME}_speedshare",
+          "image": "mrcolorrain/speedshare:latest",
+          "environment": [
+            "CODE=$SPEEDSHARE_CODE",
+            "SPEEDSHARE_UUID=$SPEEDSHARE_UUID"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}"
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "code": {},
+          "uuid": {
+            "length": 32,
+            "claimURLBase": "Speedshare nodes are automatically claimed. After starting it, go to the app's dashboard to see it. Its UUID is: "
+          }
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "SpeedShare",
+          "publisher": "unknown",
+          "official_url": "unknown",
+          "tos_url": "N/A",
+          "status": "discontinued",
+          "removal_history": "Removed due to service discontinuation and unreliable payouts.",
+          "device_limits": {
+            "max_devices_per_account": "N/A",
+            "max_devices_per_ip": "N/A",
+            "max_ips_per_account": "N/A",
+            "notes": "Service discontinued."
+          },
+          "ip_policy": {
+            "residential": "N/A",
+            "datacenter": "N/A",
+            "vps": "N/A",
+            "vpn": "N/A",
+            "proxy": "N/A",
+            "mobile": "N/A",
+            "adjacent_ips_accepted": "N/A",
+            "adjacent_ips_max": "N/A",
+            "ipv6": "N/A",
+            "geo_restrictions": "N/A",
+            "quality_notes": "N/A"
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "N/A",
+            "min_payout": "N/A",
+            "payout_methods": [],
+            "avg_monthly_residential_usd": "N/A",
+            "avg_monthly_datacenter_usd": "N/A"
+          },
+          "confidence": "medium",
+          "sources": [],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Service discontinued. Historical classification retained.",
+          "install_limit_reasoning": "Service discontinued.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "Service fully discontinued. Other projects have either removed or disabled it. mrcolorrain image is the only available Docker image.",
+          "confidence_notes": "Multiple sources confirm discontinuation."
+        },
+        "referrals": [
+          {
+            "url": "https://speedshare.app/?ref=mindlessnerd",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Service discontinued / unreliable payouts",
+        "user_config_template": {
+          "enabled": false,
+          "code": "yourSPEEDSHARECode",
+          "uuid": "yourSPEEDSHAREDeviceUUID"
+        }
+      },
+      {
+        "name": "TENEO",
+        "dashboard": "https://dashboard.teneo.pro/",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_teneo",
+          "hostname": "${DEVICE_NAME}_teneo",
+          "image": "carbon2029/dockweb:latest",
+          "environment": [
+            "TENEO_EMAIL=$TENEO_EMAIL",
+            "TENEO_PASS=$TENEO_PASSWORD"
+          ],
+          "volumes": [
+            ".data/.teneo:/app/chrome_user_data"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_BIG}",
+          "mem_reservation": "${APP_MEM_RESERV_BIG}",
+          "mem_limit": "${APP_MEM_LIMIT_BIG}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null
+        },
+        "flags": {
+          "email": {},
+          "password": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Teneo Protocol",
+          "publisher": "Teneo Protocol",
+          "official_url": "https://teneo.pro",
+          "tos_url": "undocumented",
+          "status": "deprecated",
+          "removal_history": "Moved to third-party image, unreliable service. Browser-extension primary model with no official Docker support.",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Browser-extension primary model."
+          },
+          "ip_policy": {
+            "residential": true,
+            "datacenter": "undocumented",
+            "vps": "undocumented",
+            "vpn": false,
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "none known",
+            "quality_notes": "Points-based reward system. Primarily residential browser extension."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "Teneo Points -> token",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "No official Docker image \u2014 shared third-party image with Dawn and Gradient",
+            "Browser-extension model not suitable for headless Docker"
+          ],
+          "confidence": "low",
+          "sources": [
+            "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+          ],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Browser-extension product. Points-based reward system. No official Docker support.",
+          "install_limit_reasoning": "Browser extension model. Limits undocumented.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "No other project supports Teneo. carbon2029/dockweb is the only Docker approach and unreliable.",
+          "confidence_notes": "Absent from other known projects."
+        },
+        "referrals": [
+          {
+            "url": "https://dashboard.teneo.pro/?code=qPgLn",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Moved to third-party image, unreliable service",
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourTENEOMail",
+          "password": "yourTENEOPw"
+        }
+      },
+      {
+        "name": "WIPTER",
+        "dashboard": "https://wipter.com/dashboard",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_wipter",
+          "hostname": "${DEVICE_NAME}_wipter",
+          "image": "ghcr.io/xterna/wipter",
+          "environment": [
+            "WIPTER_EMAIL=$WIPTER_EMAIL",
+            "WIPTER_PASSWORD=$WIPTER_PASSWORD"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "ports": [
+            "${WIPTER_PORT_1}:5900",
+            "${WIPTER_PORT_2}:6080"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_MEDIUM}",
+          "mem_reservation": "${APP_MEM_RESERV_MEDIUM}",
+          "mem_limit": "${APP_MEM_LIMIT_MEDIUM}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          }
+        },
+        "compose_config_proxy": {
+          "network_mode": "service:proxy",
+          "hostname": null,
+          "ports": null
+        },
+        "flags": {
+          "email": {},
+          "password": {}
+        },
+        "install_limit": -1,
+        "compose_layer": "residential",
+        "app_details": {
+          "official_name": "Wipter",
+          "publisher": "Wipter",
+          "official_url": "https://wipter.com",
+          "tos_url": "undocumented",
+          "status": "deprecated",
+          "removal_history": "Removed by M4B community vote in March 2026 due to excessive CPU/RAM/temperature usage. Unofficial Docker image. Resource pattern suggests compute-sharing rather than bandwidth-sharing.",
+          "device_limits": {
+            "max_devices_per_account": "undocumented",
+            "max_devices_per_ip": "undocumented",
+            "max_ips_per_account": "undocumented",
+            "notes": "Community vote removed it from M4B due to excessive resource usage."
+          },
+          "ip_policy": {
+            "residential": "undocumented",
+            "datacenter": "undocumented",
+            "vps": "undocumented",
+            "vpn": "undocumented",
+            "proxy": "undocumented",
+            "mobile": "undocumented",
+            "adjacent_ips_accepted": "undocumented",
+            "adjacent_ips_max": "undocumented",
+            "ipv6": "undocumented",
+            "geo_restrictions": "undocumented",
+            "quality_notes": "Resource pattern (excessive CPU/RAM) suggests compute-sharing rather than bandwidth-sharing."
+          },
+          "docker": {
+            "image_official": false,
+            "image_maintained": false,
+            "last_update": "unknown"
+          },
+          "earnings": {
+            "model": "undocumented",
+            "min_payout": "undocumented",
+            "payout_methods": [
+              "undocumented"
+            ],
+            "avg_monthly_residential_usd": "unknown",
+            "avg_monthly_datacenter_usd": "unknown"
+          },
+          "warnings": [
+            "Excessive CPU/RAM/temperature usage reported by community",
+            "No official Docker image \u2014 community GHCR image only",
+            "Removed by community vote March 2026"
+          ],
+          "confidence": "medium",
+          "sources": [],
+          "last_verified": "2026-03-21",
+          "compose_layer_reasoning": "Compute-sharing rather than bandwidth-sharing pattern. Excessive CPU/RAM usage reported.",
+          "install_limit_reasoning": "Removed by M4B community vote. Resource pattern unsuitable for bandwidth-sharing tool.",
+          "recommendation": "deprecate",
+          "recommendation_reasoning": "Removed by M4B community vote March 2026 due to excessive resource usage. Multiple Docker images exist. Some projects throttle CPU to mitigate. Consider keeping as opt-in with resource warnings.",
+          "confidence_notes": "Community vote and multiple Docker image variants confirm problematic resource pattern."
+        },
+        "referrals": [
+          {
+            "url": "https://wipter.com/signup?ref=money4band",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Unofficial Docker image, excessive CPU/RAM/temp",
+        "user_config_template": {
+          "enabled": false,
+          "email": "yourWIPTERMail",
+          "password": "yourWIPTERPw",
+          "ports": [
+            5900,
+            6080
+          ]
+        }
+      }
+    ]
   },
   "addons": {
     "entries": [
+      {
+        "name": "BEARSHARE_POT",
+        "parent_id": "BEARSHARE",
+        "description": "Auto-claims daily BearShare reward",
+        "credentials_shared": true,
+        "compose_layer": "service",
+        "compose_config": {
+          "container_name": "${DEVICE_NAME}_bearshare-pot",
+          "hostname": "${DEVICE_NAME}_bearshare-pot",
+          "image": "ghcr.io/xterna/bearshare-pot:latest",
+          "environment": [
+            "EMAIL=${BEARSHARE_EMAIL}",
+            "PASSWORD=${BEARSHARE_PASSWORD}"
+          ],
+          "labels": [
+            "com.centurylinklabs.watchtower.enable=true",
+            "com.centurylinklabs.watchtower.scope=${M4B_WATCHTOWER_SCOPE}"
+          ],
+          "restart": "always",
+          "cpus": "${APP_CPU_LIMIT_LITTLE}",
+          "mem_reservation": "${APP_MEM_RESERV_LITTLE}",
+          "mem_limit": "${APP_MEM_LIMIT_LITTLE}",
+          "logging": {
+            "driver": "json-file",
+            "options": {
+              "max-size": "10m",
+              "max-file": "3"
+            }
+          }
+        }
+      },
       {
         "name": "HONEYGAIN_POT",
         "parent_id": "HONEYGAIN",
