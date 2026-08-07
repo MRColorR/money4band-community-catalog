@@ -1,7 +1,7 @@
 # money4band-community-catalog
 
 Community-maintained catalog of apps and addons for
-[Money4Band (M4B)](https://github.com/MRColorR/money4band) — entries that
+[Money4Band (M4B)](https://github.com/MRColorR/money4band). It contains entries that
 are **external, experimental, or not officially supported** by M4B core.
 
 This repo is one of three M4B catalog sources:
