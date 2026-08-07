@@ -60,4 +60,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## License
 
-GPL-3.0 — same as M4B core.
+GPL-3.0
