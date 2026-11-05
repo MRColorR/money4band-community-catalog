@@ -70,6 +70,11 @@ M4B fetches `manifest.json` with ETag caching, writes per-file bundles
 into `config/catalog/community/`, and merges them into the app list.
 When the network is unavailable, the last cached copy is used.
 
+Install EarnApp separately using the provider's official client on an eligible
+personal device. The provider prohibits running it in Docker.
+[EarnApp installation instructions](https://help.earnapp.com/hc/en-us/articles/10261224561553-Installation-instructions-and-hardware-software-requirements)
+[EarnApp Docker policy](https://help.earnapp.com/hc/en-us/articles/10199416541969--Can-I-install-EarnApp-on-Hosting-Services-Virtual-Machines-or-Dockers)
+
 ## Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
