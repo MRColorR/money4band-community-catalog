@@ -1,6 +1,6 @@
 {
   "name": "GAGANODE",
-  "dashboard": "https://www.gaganode.com/dashboard",
+  "dashboard": "",
   "compose_config": {
     "container_name": "${DEVICE_NAME}_gaganode",
     "hostname": "${DEVICE_NAME}_gaganode",
@@ -48,7 +48,7 @@
     "publisher": "GaGaNode",
     "official_url": "https://www.gaganode.com",
     "tos_url": "undocumented",
-    "status": "active",
+    "status": "deprecated",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
@@ -83,29 +83,26 @@
       "avg_monthly_datacenter_usd": "unknown"
     },
     "warnings": [
-      "Community Docker image only — no official container verified",
+      "Community Docker image only â€” no official container verified",
       "Requires deeper research before promoting to supported"
     ],
     "confidence": "low",
     "sources": [
-      "https://www.gaganode.com",
-      "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+      "https://gaganode.com/lander",
+      "https://dashboard.gaganode.com",
+      "https://docs.gaganode.com/running/"
     ],
-    "last_verified": "2026-03-23",
+    "last_verified": "2026-11-19",
     "compose_layer_reasoning": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear. Conservative residential classification.",
     "install_limit_reasoning": "No documented device caps. Decentralized platform.",
-    "recommendation": "promoted",
-    "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
+    "recommendation": "deprecate",
+    "recommendation_reasoning": "Archived after review on 2026-11-19: gaganode.com serves a domain-parking page and dashboard.gaganode.com returns NXDOMAIN through both Cloudflare and Google DNS. Historical documentation remains available, but enrollment and the earning service could not be verified. This is an availability decision, not confirmation of a permanent shutdown.",
     "confidence_notes": "Limited external validation. Requires deeper research before promoting to supported."
   },
-  "referrals": [
-    {
-      "url": "https://www.gaganode.com",
-      "contributor": "MRColorR"
-    }
-  ],
+  "referrals": [],
   "user_config_template": {
     "enabled": false,
     "token": "yourGAGANODEToken"
-  }
+  },
+  "additional_details": "Archived after review on 2026-11-19: gaganode.com serves a domain-parking page and dashboard.gaganode.com returns NXDOMAIN through both Cloudflare and Google DNS. Historical documentation remains available, but enrollment and the earning service could not be verified. This is an availability decision, not confirmation of a permanent shutdown."
 }
