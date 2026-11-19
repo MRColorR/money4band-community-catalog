@@ -1,6 +1,6 @@
 {
   "name": "SPIDE",
-  "dashboard": "https://spide.network/dashboard",
+  "dashboard": "https://spide.network/network.html",
   "compose_config": {
     "container_name": "${DEVICE_NAME}_spide",
     "hostname": "${DEVICE_NAME}_spide",
@@ -78,7 +78,7 @@
     },
     "earnings": {
       "model": "per-GB",
-      "min_payout": "$20",
+      "min_payout": "$10",
       "payout_methods": [
         "PayPal",
         "crypto"
@@ -89,7 +89,8 @@
     "confidence": "medium",
     "sources": [
       "https://github.com/XternA/spide-network",
-      "https://www.reddit.com/r/passive_income/comments/1q5dazd/"
+      "https://www.reddit.com/r/passive_income/comments/1q5dazd/",
+      "https://spide.network/network.html"
     ],
     "last_verified": "2026-03-23",
     "compose_layer_reasoning": "Verified support for residential, Linux, and Docker on multiple IP types. Payout rates vary by IP type.",
@@ -100,7 +101,7 @@
   },
   "referrals": [
     {
-      "url": "https://spide.network",
+      "url": "https://spide.network/register.html?206a39",
       "contributor": "MRColorR"
     }
   ],
