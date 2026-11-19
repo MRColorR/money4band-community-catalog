@@ -40,8 +40,10 @@
   },
   "flags": {
     "machine_id": {
-      "length": 32,
-      "claimURLBase": "After starting, run 'docker logs <container> 2>&1 | grep \"Device Key\"' to get your device key. Register it at the Spide dashboard."
+      "length": 32
+    },
+    "manual": {
+      "instructions": "After starting the stack, open the Spide container logs and copy Device Key into Register Device at https://spide.network/network.html. Keep the machine ID saved in your Money4Band configuration to reuse the same device after container recreation. The device key and machine ID are different values."
     }
   },
   "install_limit": -1,

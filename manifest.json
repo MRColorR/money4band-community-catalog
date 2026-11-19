@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-11-19T16:48:25Z",
+  "generated_at": "2026-11-19T18:08:44Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": [
@@ -46,8 +46,10 @@
         },
         "flags": {
           "machine_id": {
-            "length": 32,
-            "claimURLBase": "After starting, run 'docker logs <container> 2>&1 | grep \"Device Key\"' to get your device key. Register it at the Spide dashboard."
+            "length": 32
+          },
+          "manual": {
+            "instructions": "After starting the stack, open the Spide container logs and copy Device Key into Register Device at https://spide.network/network.html. Keep the machine ID saved in your Money4Band configuration to reuse the same device after container recreation. The device key and machine ID are different values."
           }
         },
         "install_limit": -1,
@@ -729,7 +731,7 @@
         "app_details": {
           "official_name": "ProxyBase",
           "publisher": "ProxyBase",
-          "official_url": "https://proxybase.com",
+          "official_url": "https://peer.proxybase.org/",
           "tos_url": "undocumented",
           "status": "deprecated",
           "device_limits": {
@@ -739,17 +741,17 @@
             "notes": "Service reportedly moved domains. Very sparse documentation. No reliable information found in 2025-2026 research."
           },
           "ip_policy": {
-            "residential": "undocumented",
-            "datacenter": "undocumented",
-            "vps": "undocumented",
-            "vpn": "undocumented",
-            "proxy": "undocumented",
+            "residential": true,
+            "datacenter": false,
+            "vps": false,
+            "vpn": false,
+            "proxy": false,
             "mobile": "undocumented",
             "adjacent_ips_accepted": "undocumented",
             "adjacent_ips_max": "undocumented",
             "ipv6": "undocumented",
             "geo_restrictions": "undocumented",
-            "quality_notes": "Insufficient data to assess IP policy."
+            "quality_notes": "The current official peer FAQ requires residential ISP addresses and rejects VPN, proxy and datacenter IPs."
           },
           "docker": {
             "image_official": "unknown",
@@ -766,18 +768,18 @@
             "avg_monthly_datacenter_usd": "unknown"
           },
           "warnings": [
-            "Domain instability \u2014 service may have moved or shut down",
-            "Zero accessible official documentation",
-            "Verify service is alive before deploying"
+            "The archived Money4Band image and USER_ID setup do not match the current provider client."
           ],
           "confidence": "low",
-          "sources": [],
-          "last_verified": "2026-03-21",
+          "sources": [
+            "https://peer.proxybase.org/"
+          ],
+          "last_verified": "2026-11-19",
           "compose_layer_reasoning": "Insufficient data to assess IP policy. Service domain instability prevents verification.",
           "install_limit_reasoning": "Zero accessible official documentation. No verified limits exist.",
           "recommendation": "re-evaluate",
-          "recommendation_reasoning": "Domain instability and zero documentation. Verify service is alive before deploying. Consider deprecation.",
-          "confidence_notes": "No accessible documentation or active service site found during research.",
+          "recommendation_reasoning": "Review and test the current client before restoring this archived integration.",
+          "confidence_notes": "The official peer site is reachable and publishes ghcr.io/proxybaseorg/peer-cli. The replacement integration has not been authenticated or traffic-tested in Money4Band.",
           "removal_history": "Removed 2026-05-15 due to domain instability. Service may have shut down or migrated; zero accessible documentation found in 2025-2026 research. No verifiable signal that the peer-program is still paying out."
         },
         "referrals": [
@@ -790,7 +792,7 @@
           "enabled": false,
           "userid": "yourPROXYBASEUserID"
         },
-        "additional_details": "Domain instability \u2014 service may have shut down"
+        "additional_details": "Archived integration: the current provider publishes ghcr.io/proxybaseorg/peer-cli with new onboarding. The old Money4Band image and USER_ID setup need replacement and authenticated testing before this entry can be restored. This archive does not imply that the provider has shut down."
       },
       {
         "name": "SPEEDSHARE",
