@@ -52,8 +52,7 @@
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": 1,
-      "max_ips_per_account": "undocumented",
-      "notes": "Limited documentation. Other projects support it."
+      "max_ips_per_account": "undocumented"
     },
     "ip_policy": {
       "residential": true,
@@ -83,18 +82,11 @@
       "avg_monthly_datacenter_usd": "unknown"
     },
     "warnings": [
-      "Reported 522 errors in community",
-      "Service stability unverified \u2014 use with caution"
+      "Service connection failures."
     ],
     "confidence": "low",
     "sources": [],
-    "last_verified": "2026-03-23",
-    "compose_layer_reasoning": "Limited available documentation. Supported on DC/VPS by other projects.",
-    "install_limit_reasoning": "Limited documentation. Other projects support it.",
-    "recommendation": "promoted",
-    "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
-    "confidence_notes": "Community reports service instability (522 errors).",
-    "removal_history": "Removed 2026-05-15 due to persistent HTTP 522 errors at the service backend. IGM also flags WizardGain as dead in their tracking. Image wizardgain/worker still publishes but the upstream service is unreliable."
+    "last_verified": "2026-03-23"
   },
   "referrals": [
     {
@@ -106,5 +98,5 @@
     "enabled": false,
     "email": "yourWIZARDGAINMail"
   },
-  "additional_details": "522 errors \u2014 service infrastructure unreliable"
+  "additional_details": "Archived: service connection failures."
 }

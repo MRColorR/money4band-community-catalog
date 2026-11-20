@@ -33,16 +33,14 @@
   "compose_layer": "residential",
   "app_details": {
     "official_name": "SpeedShare",
-    "publisher": "unknown",
-    "official_url": "unknown",
+    "publisher": "Speed Proxies LTD (website footer)",
+    "official_url": "https://speedshare.app/",
     "tos_url": "N/A",
     "status": "deprecated",
-    "removal_history": "Removed due to service discontinuation and unreliable payouts.",
     "device_limits": {
       "max_devices_per_account": "N/A",
       "max_devices_per_ip": "N/A",
-      "max_ips_per_account": "N/A",
-      "notes": "Service discontinued."
+      "max_ips_per_account": "N/A"
     },
     "ip_policy": {
       "residential": "N/A",
@@ -70,13 +68,11 @@
       "avg_monthly_datacenter_usd": "N/A"
     },
     "confidence": "medium",
-    "sources": [],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Service discontinued. Historical classification retained.",
-    "install_limit_reasoning": "Service discontinued.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Service fully discontinued. Other projects have either removed or disabled it. mrcolorrain image is the only available Docker image.",
-    "confidence_notes": "Multiple sources confirm discontinuation."
+    "sources": [
+      "https://speedshare.app/",
+      "https://dashboard.speedshare.app/"
+    ],
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -84,7 +80,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Service discontinued / unreliable payouts",
+  "additional_details": "Archived: dashboard authentication fails.",
   "user_config_template": {
     "enabled": false,
     "code": "yourSPEEDSHARECode",

@@ -41,10 +41,9 @@
   "app_details": {
     "official_name": "Teneo Protocol",
     "publisher": "Teneo Protocol",
-    "official_url": "https://teneo.pro",
+    "official_url": "https://teneo-protocol.ai/",
     "tos_url": "undocumented",
     "status": "deprecated",
-    "removal_history": "Moved to third-party image, unreliable service. Browser-extension primary model with no official Docker support.",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
@@ -84,14 +83,10 @@
     ],
     "confidence": "low",
     "sources": [
-      "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+      "https://teneo-protocol.ai/",
+      "https://teneo-protocol.ai/beacon"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Browser-extension product. Points-based reward system. No official Docker support.",
-    "install_limit_reasoning": "Browser extension model. Limits undocumented.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "No other project supports Teneo. carbon2029/dockweb is the only Docker approach and unreliable.",
-    "confidence_notes": "Absent from other known projects."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -99,7 +94,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Moved to third-party image, unreliable service",
+  "additional_details": "Archived Docker integration. The provider offers the Beacon app.",
   "user_config_template": {
     "enabled": false,
     "email": "yourTENEOMail",

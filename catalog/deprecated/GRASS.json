@@ -1,6 +1,6 @@
 {
   "name": "GRASS",
-  "dashboard": "https://app.getgrass.io/dashboard",
+  "dashboard": "https://app.grass.io/dashboard",
   "compose_config": {
     "container_name": "${DEVICE_NAME}_grass",
     "hostname": "${DEVICE_NAME}_grass",
@@ -36,15 +36,14 @@
   "app_details": {
     "official_name": "Grass (Wynd Network)",
     "publisher": "Wynd Network",
-    "official_url": "https://www.getgrass.io",
-    "tos_url": "https://www.getgrass.io/terms",
+    "official_url": "https://www.grass.io/",
+    "tos_url": "https://www.grass.io/terms-and-conditions/",
     "status": "deprecated",
-    "removal_history": "Removed due to Docker image unavailability and service instability. No official Docker image exists. Significant VC backing but no official container as of 2026.",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
       "max_ips_per_account": "undocumented",
-      "notes": "Browser-extension primary architecture. No official Docker support as of March 2026."
+      "notes": "Official desktop and browser-extension clients."
     },
     "ip_policy": {
       "residential": true,
@@ -57,7 +56,7 @@
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
       "geo_restrictions": "none known",
-      "quality_notes": "Residential-only by design. VPN and datacenter IPs blocked. Evolved into major DePIN player on Solana."
+      "quality_notes": "Residential connections only. VPNs and datacenter IPs are blocked."
     },
     "docker": {
       "image_official": false,
@@ -74,28 +73,23 @@
       "avg_monthly_datacenter_usd": "N/A"
     },
     "warnings": [
-      "No official Docker image — community-maintained only",
-      "Worth monitoring — if official Docker image is released, reconsider"
+      "Unofficial Docker image."
     ],
     "confidence": "medium",
     "sources": [
-      "https://www.getgrass.io",
-      "https://www.reddit.com/r/AirdropCryptoAlpha/comments/1i23595/"
+      "https://www.grass.io/",
+      "https://grass-foundation.gitbook.io/grass-docs",
+      "https://www.grass.io/terms-and-conditions/"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Residential-only by design. VPN and datacenter IPs blocked. Browser-extension primary architecture.",
-    "install_limit_reasoning": "No official Docker support. Browser extension model limits practical deployment.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "No official Docker image exists. Multiple third-party images exist (XternA websocket vs carbon2029 browser-wrapper). Worth monitoring for official Docker release.",
-    "confidence_notes": "Major DePIN player on Solana but no official container as of March 2026. Two different community approaches exist."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
-      "url": "https://app.getgrass.io/register/?referralCode=qyvJmxgNUhcLo2f",
+      "url": "https://app.grass.io/register?referralCode=qyvJmxgNUhcLo2f",
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Docker image unavailability / service instability",
+  "additional_details": "Archived Docker integration. Install the official Grass app separately.",
   "user_config_template": {
     "enabled": false,
     "userid": "yourGRASSUserID"

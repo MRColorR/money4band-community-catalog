@@ -47,12 +47,10 @@
     "official_url": "https://peer2profit.app",
     "tos_url": "N/A",
     "status": "deprecated",
-    "removal_history": "Docker Hub image was pulled (GitHub issue #56). Website has been down. Service fully discontinued.",
     "device_limits": {
       "max_devices_per_account": "N/A",
       "max_devices_per_ip": "N/A",
-      "max_ips_per_account": "N/A",
-      "notes": "Service discontinued. Website down. Docker Hub image pulled."
+      "max_ips_per_account": "N/A"
     },
     "ip_policy": {
       "residential": "N/A",
@@ -84,12 +82,7 @@
       "https://www.youtube.com/watch?v=toiEukWY5O4",
       "https://www.trustpilot.com/review/dashboard.peer2profit.app"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Service discontinued. Website down. Docker Hub image pulled.",
-    "install_limit_reasoning": "Service discontinued.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Docker Hub image was pulled. Website down. All three projects use different third-party images (mrcolorrain, xterna, enwaiax). Service is fully dead.",
-    "confidence_notes": "YouTube reports and Trustpilot reviews confirm service shutdown. Multiple community images exist but service backend is offline."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -97,7 +90,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Docker Hub image pulled (#56) / service discontinued",
+  "additional_details": "Archived: earning service unavailable.",
   "user_config_template": {
     "enabled": false,
     "email": "yourPEER2PROFITMail",

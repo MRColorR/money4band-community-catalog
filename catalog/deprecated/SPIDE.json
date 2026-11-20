@@ -1,10 +1,10 @@
 {
   "name": "SPIDE",
-  "dashboard": "https://spide.network/dashboard",
+  "dashboard": "https://spide.network/network.html",
   "compose_config": {
     "container_name": "${DEVICE_NAME}_spide",
     "hostname": "${DEVICE_NAME}_spide",
-    "image": "xterna/spide-network",
+    "image": "xterna/spide-network:latest",
     "environment": [
       "ID=${SPIDE_MACHINE_ID}"
     ],
@@ -41,17 +41,20 @@
   "flags": {
     "machine_id": {
       "length": 32,
-      "claimURLBase": "After starting, run 'docker logs <container> 2>&1 | grep \"Device Key\"' to get your device key. Register it at the Spide dashboard."
+      "instructions": "Use an existing Machine ID to restore a device, or keep the suggested value."
+    },
+    "manual": {
+      "instructions": "Start the stack. Copy Device Key from the Spide container logs into Register Device at https://spide.network/network.html. Keep the Machine ID to reuse this device.",
+      "device_key_from_logs": true
     }
   },
-  "install_limit": -1,
-  "compose_layer": "universal",
+  "install_limit": 1,
   "app_details": {
     "official_name": "Spide Network",
     "publisher": "Spide",
     "official_url": "https://spide.network",
-    "tos_url": "undocumented",
-    "status": "active",
+    "tos_url": "https://spide.network/terms-of-use.html",
+    "status": "deprecated",
     "device_limits": {
       "max_devices_per_account": "unlimited",
       "max_devices_per_ip": 1,
@@ -60,52 +63,55 @@
     },
     "ip_policy": {
       "residential": true,
-      "datacenter": true,
-      "vps": true,
-      "vpn": "undocumented",
-      "proxy": "undocumented",
+      "datacenter": false,
+      "vps": false,
+      "vpn": false,
+      "proxy": false,
       "mobile": true,
       "adjacent_ips_accepted": true,
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
       "geo_restrictions": "none known",
-      "quality_notes": "Payout rates vary by IP type. Verified support for residential, Linux, and Docker on multiple IP types."
+      "quality_notes": "Official terms require residential IPs and prohibit servers, VPNs and proxy services."
     },
     "docker": {
       "image_official": false,
-      "image_maintained": true,
-      "last_update": "2024-10"
+      "image_maintained": false,
+      "last_update": "2024-05"
     },
     "earnings": {
       "model": "per-GB",
-      "min_payout": "$20",
+      "min_payout": "$5",
       "payout_methods": [
         "PayPal",
-        "crypto"
+        "BTC"
       ],
       "avg_monthly_residential_usd": "unknown (early stage)",
       "avg_monthly_datacenter_usd": "unknown"
     },
     "confidence": "medium",
     "sources": [
+      "https://spide.network/terms-of-use.html",
       "https://github.com/XternA/spide-network",
-      "https://www.reddit.com/r/passive_income/comments/1q5dazd/"
+      "https://spide.network/network.html",
+      "https://spide.network/become-a-peer.html",
+      "https://github.com/XternA/income-generator/issues/132"
     ],
-    "last_verified": "2026-03-23",
-    "compose_layer_reasoning": "Verified support for residential, Linux, and Docker on multiple IP types. Payout rates vary by IP type.",
-    "install_limit_reasoning": "Designed for multi-node deployments. Requires machine ID to regenerate device keys.",
-    "recommendation": "promoted",
-    "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
-    "confidence_notes": "Community tests confirm functionality, but it is early-stage."
+    "last_verified": "2026-11-20",
+    "warnings": [
+      "Client connection fails."
+    ]
   },
   "referrals": [
     {
-      "url": "https://spide.network",
+      "url": "https://spide.network/register.html?206a39",
       "contributor": "MRColorR"
     }
   ],
   "user_config_template": {
     "enabled": false,
     "machine_id": "yourSPIDEMachineID"
-  }
+  },
+  "profile": "residential",
+  "additional_details": "Archived: the Docker client cannot connect to the provider service."
 }

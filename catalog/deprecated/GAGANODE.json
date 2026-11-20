@@ -52,8 +52,7 @@
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
-      "max_ips_per_account": "undocumented",
-      "notes": "Decentralized edge cloud platform. No hard limits documented."
+      "max_ips_per_account": "undocumented"
     },
     "ip_policy": {
       "residential": true,
@@ -65,8 +64,7 @@
       "adjacent_ips_accepted": "undocumented",
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
-      "geo_restrictions": "none known",
-      "quality_notes": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear."
+      "geo_restrictions": "none known"
     },
     "docker": {
       "image_official": false,
@@ -83,8 +81,7 @@
       "avg_monthly_datacenter_usd": "unknown"
     },
     "warnings": [
-      "Community Docker image only â€” no official container verified",
-      "Requires deeper research before promoting to supported"
+      "Unofficial Docker image."
     ],
     "confidence": "low",
     "sources": [
@@ -92,17 +89,12 @@
       "https://dashboard.gaganode.com",
       "https://docs.gaganode.com/running/"
     ],
-    "last_verified": "2026-11-19",
-    "compose_layer_reasoning": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear. Conservative residential classification.",
-    "install_limit_reasoning": "No documented device caps. Decentralized platform.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Archived after review on 2026-11-19: gaganode.com serves a domain-parking page and dashboard.gaganode.com returns NXDOMAIN through both Cloudflare and Google DNS. Historical documentation remains available, but enrollment and the earning service could not be verified. This is an availability decision, not confirmation of a permanent shutdown.",
-    "confidence_notes": "Limited external validation. Requires deeper research before promoting to supported."
+    "last_verified": "2026-11-19"
   },
   "referrals": [],
   "user_config_template": {
     "enabled": false,
     "token": "yourGAGANODEToken"
   },
-  "additional_details": "Archived after review on 2026-11-19: gaganode.com serves a domain-parking page and dashboard.gaganode.com returns NXDOMAIN through both Cloudflare and Google DNS. Historical documentation remains available, but enrollment and the earning service could not be verified. This is an availability decision, not confirmation of a permanent shutdown."
+  "additional_details": "Archived: signup site and dashboard unavailable."
 }
