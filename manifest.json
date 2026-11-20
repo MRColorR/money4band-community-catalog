@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-11-20T08:51:45Z",
+  "generated_at": "2026-11-20T09:00:17Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": [
@@ -250,7 +250,7 @@
     "entries": [
       {
         "name": "DAWN",
-        "dashboard": "",
+        "dashboard": "https://dawninternet.com",
         "compose_config": {
           "container_name": "${DEVICE_NAME}_dawn",
           "hostname": "${DEVICE_NAME}_dawn",
@@ -295,7 +295,7 @@
         "app_details": {
           "official_name": "Dawn Internet",
           "publisher": "Dawn Internet",
-          "official_url": "https://infrastructure.finance/",
+          "official_url": "https://dawninternet.com",
           "tos_url": "undocumented",
           "status": "deprecated",
           "removal_history": "Moved to third-party image, unreliable service. Browser-extension product with no official Docker support.",
@@ -348,8 +348,13 @@
           "recommendation_reasoning": "No other project supports Dawn as a standalone app. carbon2029/dockweb is the only Docker approach and unreliable. Browser extension not suitable for headless Docker.",
           "confidence_notes": "Absent from other known projects."
         },
-        "referrals": [],
-        "additional_details": "The former dawninternet.com site redirects to infrastructure.finance, an infrastructure-finance product. The old bandwidth-sharing wrapper and referral code have not been validated for that product. The Money4Band integration remains archived.",
+        "referrals": [
+          {
+            "url": "https://dawninternet.com?code=xo23vynw",
+            "contributor": "MRColorR"
+          }
+        ],
+        "additional_details": "Historical website, dashboard and referral links are retained for reference. The former dawninternet.com site redirects to infrastructure.finance, an infrastructure-finance product. The old bandwidth-sharing wrapper and referral code have not been validated for that product. The Money4Band integration remains archived.",
         "user_config_template": {
           "enabled": false,
           "email": "yourDAWNMail",
