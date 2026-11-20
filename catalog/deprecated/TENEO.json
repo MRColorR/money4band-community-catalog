@@ -41,7 +41,7 @@
   "app_details": {
     "official_name": "Teneo Protocol",
     "publisher": "Teneo Protocol",
-    "official_url": "https://teneo.pro",
+    "official_url": "https://teneo-protocol.ai/",
     "tos_url": "undocumented",
     "status": "deprecated",
     "removal_history": "Moved to third-party image, unreliable service. Browser-extension primary model with no official Docker support.",
@@ -84,7 +84,8 @@
     ],
     "confidence": "low",
     "sources": [
-      "https://www.youtube.com/watch?v=nFlf83zjD-Y"
+      "https://teneo-protocol.ai/",
+      "https://teneo-protocol.ai/beacon"
     ],
     "last_verified": "2026-03-21",
     "compose_layer_reasoning": "Browser-extension product. Points-based reward system. No official Docker support.",
@@ -99,7 +100,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Moved to third-party image, unreliable service",
+  "additional_details": "The current provider offers the Beacon app at teneo-protocol.ai. The legacy dashboard still responds, but the historical browser-wrapper integration has not been validated with the current product and remains archived.",
   "user_config_template": {
     "enabled": false,
     "email": "yourTENEOMail",

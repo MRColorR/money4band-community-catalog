@@ -97,7 +97,6 @@
     "confidence": "medium",
     "sources": [
       "https://peer.proxybase.org/",
-      "https://github.com/proxybaseorg/Peer-Cli",
       "https://github.com/proxybaseorg/Peer-App-Universal-Releases"
     ],
     "last_verified": "2026-11-20",

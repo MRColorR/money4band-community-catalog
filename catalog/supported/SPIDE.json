@@ -46,13 +46,12 @@
       "instructions": "After starting the stack, open the Spide container logs and copy Device Key into Register Device at https://spide.network/network.html. Keep the machine ID saved in your Money4Band configuration to reuse the same device after container recreation. The device key and machine ID are different values."
     }
   },
-  "install_limit": -1,
-  "compose_layer": "universal",
+  "install_limit": 1,
   "app_details": {
     "official_name": "Spide Network",
     "publisher": "Spide",
     "official_url": "https://spide.network",
-    "tos_url": "undocumented",
+    "tos_url": "https://spide.network/terms-of-use.html",
     "status": "active",
     "device_limits": {
       "max_devices_per_account": "unlimited",
@@ -62,16 +61,16 @@
     },
     "ip_policy": {
       "residential": true,
-      "datacenter": true,
-      "vps": true,
-      "vpn": "undocumented",
-      "proxy": "undocumented",
+      "datacenter": false,
+      "vps": false,
+      "vpn": false,
+      "proxy": false,
       "mobile": true,
       "adjacent_ips_accepted": true,
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
       "geo_restrictions": "none known",
-      "quality_notes": "Payout rates vary by IP type. Verified support for residential, Linux, and Docker on multiple IP types."
+      "quality_notes": "Official terms require residential IPs and prohibit servers, VPNs and proxy services."
     },
     "docker": {
       "image_official": false,
@@ -80,26 +79,26 @@
     },
     "earnings": {
       "model": "per-GB",
-      "min_payout": "$10",
+      "min_payout": "$5",
       "payout_methods": [
         "PayPal",
-        "crypto"
+        "BTC"
       ],
       "avg_monthly_residential_usd": "unknown (early stage)",
       "avg_monthly_datacenter_usd": "unknown"
     },
     "confidence": "medium",
     "sources": [
+      "https://spide.network/terms-of-use.html",
       "https://github.com/XternA/spide-network",
-      "https://www.reddit.com/r/passive_income/comments/1q5dazd/",
       "https://spide.network/network.html"
     ],
     "last_verified": "2026-03-23",
-    "compose_layer_reasoning": "Verified support for residential, Linux, and Docker on multiple IP types. Payout rates vary by IP type.",
-    "install_limit_reasoning": "Designed for multi-node deployments. Requires machine ID to regenerate device keys.",
+    "compose_layer_reasoning": "Residential-only policy stated in the official terms.",
+    "install_limit_reasoning": "One device per public IP, stated in the official terms.",
     "recommendation": "promoted",
     "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
-    "confidence_notes": "Community tests confirm functionality, but it is early-stage."
+    "confidence_notes": "Terms and community image setup checked. Authenticating the replacement setup and credited traffic remain untested."
   },
   "referrals": [
     {
@@ -110,5 +109,6 @@
   "user_config_template": {
     "enabled": false,
     "machine_id": "yourSPIDEMachineID"
-  }
+  },
+  "profile": "residential"
 }
