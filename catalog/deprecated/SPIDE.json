@@ -40,10 +40,12 @@
   },
   "flags": {
     "machine_id": {
-      "length": 32
+      "length": 32,
+      "instructions": "Use an existing Machine ID to restore a device, or keep the suggested value."
     },
     "manual": {
-      "instructions": "After starting the stack, open the Spide container logs and copy Device Key into Register Device at https://spide.network/network.html. Keep the machine ID saved in your Money4Band configuration to reuse the same device after container recreation. The device key and machine ID are different values."
+      "instructions": "Start the stack. Copy Device Key from the Spide container logs into Register Device at https://spide.network/network.html. Keep the Machine ID to reuse this device.",
+      "device_key_from_logs": true
     }
   },
   "install_limit": 1,
@@ -52,7 +54,7 @@
     "publisher": "Spide",
     "official_url": "https://spide.network",
     "tos_url": "https://spide.network/terms-of-use.html",
-    "status": "active",
+    "status": "deprecated",
     "device_limits": {
       "max_devices_per_account": "unlimited",
       "max_devices_per_ip": 1,
@@ -91,9 +93,14 @@
     "sources": [
       "https://spide.network/terms-of-use.html",
       "https://github.com/XternA/spide-network",
-      "https://spide.network/network.html"
+      "https://spide.network/network.html",
+      "https://spide.network/become-a-peer.html",
+      "https://github.com/XternA/income-generator/issues/132"
     ],
-    "last_verified": "2026-03-23"
+    "last_verified": "2026-03-23",
+    "warnings": [
+      "Client connection fails."
+    ]
   },
   "referrals": [
     {
@@ -105,5 +112,6 @@
     "enabled": false,
     "machine_id": "yourSPIDEMachineID"
   },
-  "profile": "residential"
+  "profile": "residential",
+  "additional_details": "Archived: the Docker client cannot connect to the provider service."
 }
