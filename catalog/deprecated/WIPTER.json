@@ -46,12 +46,10 @@
     "official_url": "https://wipter.com",
     "tos_url": "https://wipter.com/en/terms-and-conditions-of-use",
     "status": "deprecated",
-    "removal_history": "Removed by M4B community vote in March 2026 due to excessive CPU/RAM/temperature usage. Unofficial Docker image. Resource pattern suggests compute-sharing rather than bandwidth-sharing.",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
-      "max_ips_per_account": "undocumented",
-      "notes": "Community vote removed it from M4B due to excessive resource usage."
+      "max_ips_per_account": "undocumented"
     },
     "ip_policy": {
       "residential": true,
@@ -64,7 +62,7 @@
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
       "geo_restrictions": "undocumented",
-      "quality_notes": "The current official FAQ lists residential, datacenter/hosting and mobile IP types. The old container remains unvalidated."
+      "quality_notes": "Residential, datacenter/hosting and mobile connections are eligible."
     },
     "docker": {
       "image_official": false,
@@ -81,21 +79,15 @@
       "avg_monthly_datacenter_usd": "unknown"
     },
     "warnings": [
-      "Excessive CPU/RAM/temperature usage reported by community",
-      "No official Docker image — community GHCR image only",
-      "Removed by community vote March 2026"
+      "High CPU and RAM usage.",
+      "Unofficial Docker image."
     ],
     "confidence": "medium",
     "sources": [
       "https://wipter.com/en",
       "https://wipter.com/en/terms-and-conditions-of-use"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Provider FAQ describes bandwidth sharing on several IP types. Historical resource concerns do not establish that it is a compute-sharing service.",
-    "install_limit_reasoning": "Removed by M4B community vote. Resource pattern unsuitable for bandwidth-sharing tool.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Removed by M4B community vote March 2026 due to excessive resource usage. Multiple Docker images exist. Some projects throttle CPU to mitigate. Consider keeping as opt-in with resource warnings.",
-    "confidence_notes": "The current provider site describes bandwidth sharing. Historical M4B resource-use concerns have not been retested; image publication does not establish successful authentication or payouts."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -103,7 +95,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "The provider website is active and advertises bandwidth sharing with a $20 payout threshold. The historical community container is still published but remains archived pending resource-use, authentication and credited-traffic tests.",
+  "additional_details": "Archived: excessive container resource usage.",
   "user_config_template": {
     "enabled": false,
     "email": "yourWIPTERMail",

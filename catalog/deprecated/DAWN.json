@@ -48,12 +48,11 @@
     "official_url": "https://dawninternet.com",
     "tos_url": "undocumented",
     "status": "deprecated",
-    "removal_history": "Moved to third-party image, unreliable service. Browser-extension product with no official Docker support.",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
       "max_ips_per_account": "undocumented",
-      "notes": "Originally a browser-extension product."
+      "notes": "Browser-extension client."
     },
     "ip_policy": {
       "residential": true,
@@ -83,20 +82,14 @@
       "avg_monthly_datacenter_usd": "unknown"
     },
     "warnings": [
-      "No official Docker image — relies on third-party browser-container workaround",
-      "Third-party image shared with Teneo and Gradient"
+      "Unofficial Docker image."
     ],
     "confidence": "low",
     "sources": [
       "https://dawninternet.com/",
       "https://infrastructure.finance/"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Browser-extension product. No official Docker support. Third-party browser-container workaround only.",
-    "install_limit_reasoning": "Browser extension model. Limits undocumented.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "No other project supports Dawn as a standalone app. carbon2029/dockweb is the only Docker approach and unreliable. Browser extension not suitable for headless Docker.",
-    "confidence_notes": "Absent from other known projects."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -104,7 +97,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "Historical website, dashboard and referral links are retained for reference. The former dawninternet.com site redirects to infrastructure.finance, an infrastructure-finance product. The old bandwidth-sharing wrapper and referral code have not been validated for that product. The Money4Band integration remains archived.",
+  "additional_details": "Archived: bandwidth-sharing integration unavailable.",
   "user_config_template": {
     "enabled": false,
     "email": "yourDAWNMail",

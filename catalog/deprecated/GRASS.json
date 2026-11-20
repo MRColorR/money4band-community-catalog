@@ -39,12 +39,11 @@
     "official_url": "https://www.grass.io/",
     "tos_url": "https://www.grass.io/terms-and-conditions/",
     "status": "deprecated",
-    "removal_history": "Historical removal notes cited image availability and service instability. On 2026-11-20 the community image manifest and provider site are reachable; authenticated operation and credited traffic remain unvalidated.",
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
       "max_ips_per_account": "undocumented",
-      "notes": "Browser-extension primary architecture. No official Docker support as of March 2026."
+      "notes": "Official desktop and browser-extension clients."
     },
     "ip_policy": {
       "residential": true,
@@ -57,7 +56,7 @@
       "adjacent_ips_max": "undocumented",
       "ipv6": "undocumented",
       "geo_restrictions": "none known",
-      "quality_notes": "Residential-only by design. VPN and datacenter IPs blocked. Evolved into major DePIN player on Solana."
+      "quality_notes": "Residential connections only. VPNs and datacenter IPs are blocked."
     },
     "docker": {
       "image_official": false,
@@ -74,8 +73,7 @@
       "avg_monthly_datacenter_usd": "N/A"
     },
     "warnings": [
-      "No official Docker image — community-maintained only",
-      "Worth monitoring — if official Docker image is released, reconsider"
+      "Unofficial Docker image."
     ],
     "confidence": "medium",
     "sources": [
@@ -83,12 +81,7 @@
       "https://grass-foundation.gitbook.io/grass-docs",
       "https://www.grass.io/terms-and-conditions/"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Residential-only by design. VPN and datacenter IPs blocked. Browser-extension primary architecture.",
-    "install_limit_reasoning": "No official Docker support. Browser extension model limits practical deployment.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Re-evaluate the community container before restoration; image publication alone is insufficient.",
-    "confidence_notes": "Current provider URLs and community image manifests verified; no authenticated container or payout test performed."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -96,7 +89,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "The provider site and dashboard are active on grass.io. The historical community Docker image is still published, but its authenticated operation and credited traffic have not been revalidated. This archived integration does not mean the provider has shut down.",
+  "additional_details": "Archived Docker integration. Install the official Grass app separately.",
   "user_config_template": {
     "enabled": false,
     "userid": "yourGRASSUserID"

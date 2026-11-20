@@ -37,12 +37,11 @@
     "official_url": "https://speedshare.app/",
     "tos_url": "N/A",
     "status": "deprecated",
-    "removal_history": "Historical removal notes cited service and payout failures. On 2026-11-20 the public site responds but the maintainer reports dashboard authentication failure. Permanent shutdown is unconfirmed.",
     "device_limits": {
       "max_devices_per_account": "N/A",
       "max_devices_per_ip": "N/A",
       "max_ips_per_account": "N/A",
-      "notes": "Account and device limits have not been verified."
+      "notes": "Device limits are undocumented."
     },
     "ip_policy": {
       "residential": "N/A",
@@ -74,12 +73,7 @@
       "https://speedshare.app/",
       "https://dashboard.speedshare.app/"
     ],
-    "last_verified": "2026-03-21",
-    "compose_layer_reasoning": "Historical classification retained; current network eligibility is unverified.",
-    "install_limit_reasoning": "Current account/device limits unverified.",
-    "recommendation": "deprecate",
-    "recommendation_reasoning": "Keep archived: the public site responds, but dashboard authentication fails in the maintainer test and the earning integration is not validated.",
-    "confidence_notes": "Public site and dashboard HTTP responses checked. Maintainer reports dashboard authentication failure; permanent service shutdown is unconfirmed."
+    "last_verified": "2026-03-21"
   },
   "referrals": [
     {
@@ -87,7 +81,7 @@
       "contributor": "MRColorR"
     }
   ],
-  "additional_details": "The public SpeedShare website responds, but the maintainer cannot authenticate in the dashboard. The integration remains archived; current enrollment, container authentication and payouts have not been verified. Permanent shutdown is unconfirmed.",
+  "additional_details": "Archived: dashboard authentication fails.",
   "user_config_template": {
     "enabled": false,
     "code": "yourSPEEDSHARECode",

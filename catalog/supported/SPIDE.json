@@ -93,12 +93,7 @@
       "https://github.com/XternA/spide-network",
       "https://spide.network/network.html"
     ],
-    "last_verified": "2026-03-23",
-    "compose_layer_reasoning": "Residential-only policy stated in the official terms.",
-    "install_limit_reasoning": "One device per public IP, stated in the official terms.",
-    "recommendation": "promoted",
-    "recommendation_reasoning": "Promoted to supported. Docker image verified on Docker Hub.",
-    "confidence_notes": "Terms and community image setup checked. Authenticating the replacement setup and credited traffic remain untested."
+    "last_verified": "2026-03-23"
   },
   "referrals": [
     {
