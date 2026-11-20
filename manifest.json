@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-11-20T15:31:42Z",
+  "generated_at": "2026-11-20T15:39:28Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": [
@@ -283,8 +283,7 @@
           "device_limits": {
             "max_devices_per_account": "undocumented",
             "max_devices_per_ip": "undocumented",
-            "max_ips_per_account": "undocumented",
-            "notes": "Device limits are undocumented."
+            "max_ips_per_account": "undocumented"
           },
           "ip_policy": {
             "residential": true,
@@ -296,8 +295,7 @@
             "adjacent_ips_accepted": "undocumented",
             "adjacent_ips_max": "undocumented",
             "ipv6": "undocumented",
-            "geo_restrictions": "none known",
-            "quality_notes": "Markets itself as 'decentralized edge cloud'. IP acceptance policy unclear."
+            "geo_restrictions": "none known"
           },
           "docker": {
             "image_official": false,
@@ -390,8 +388,7 @@
           "device_limits": {
             "max_devices_per_account": "undocumented",
             "max_devices_per_ip": "undocumented",
-            "max_ips_per_account": "undocumented",
-            "notes": "Sentry Node beta has ended."
+            "max_ips_per_account": "undocumented"
           },
           "ip_policy": {
             "residential": true,
@@ -685,8 +682,7 @@
           "device_limits": {
             "max_devices_per_account": "N/A",
             "max_devices_per_ip": "N/A",
-            "max_ips_per_account": "N/A",
-            "notes": "Device limits are undocumented."
+            "max_ips_per_account": "N/A"
           },
           "ip_policy": {
             "residential": "N/A",
@@ -998,8 +994,7 @@
           "device_limits": {
             "max_devices_per_account": "undocumented",
             "max_devices_per_ip": 1,
-            "max_ips_per_account": "undocumented",
-            "notes": "Device limits are undocumented."
+            "max_ips_per_account": "undocumented"
           },
           "ip_policy": {
             "residential": true,

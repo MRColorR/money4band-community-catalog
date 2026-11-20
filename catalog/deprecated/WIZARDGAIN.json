@@ -52,8 +52,7 @@
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": 1,
-      "max_ips_per_account": "undocumented",
-      "notes": "Device limits are undocumented."
+      "max_ips_per_account": "undocumented"
     },
     "ip_policy": {
       "residential": true,

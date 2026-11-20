@@ -40,8 +40,7 @@
     "device_limits": {
       "max_devices_per_account": "N/A",
       "max_devices_per_ip": "N/A",
-      "max_ips_per_account": "N/A",
-      "notes": "Device limits are undocumented."
+      "max_ips_per_account": "N/A"
     },
     "ip_policy": {
       "residential": "N/A",

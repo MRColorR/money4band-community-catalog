@@ -57,8 +57,7 @@
     "device_limits": {
       "max_devices_per_account": "undocumented",
       "max_devices_per_ip": "undocumented",
-      "max_ips_per_account": "undocumented",
-      "notes": "Sentry Node beta has ended."
+      "max_ips_per_account": "undocumented"
     },
     "ip_policy": {
       "residential": true,
