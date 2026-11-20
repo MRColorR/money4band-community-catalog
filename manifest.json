@@ -1,6 +1,6 @@
 {
   "app_config_version": 2.0,
-  "generated_at": "2026-11-20T17:35:26Z",
+  "generated_at": "2026-11-20T17:42:50Z",
   "source": "money4band-community-catalog",
   "supported": {
     "entries": []
@@ -625,7 +625,7 @@
         "compose_config": {
           "container_name": "${DEVICE_NAME}_spide",
           "hostname": "${DEVICE_NAME}_spide",
-          "image": "xterna/spide-network",
+          "image": "xterna/spide-network:latest",
           "environment": [
             "ID=${SPIDE_MACHINE_ID}"
           ],
@@ -697,8 +697,8 @@
           },
           "docker": {
             "image_official": false,
-            "image_maintained": true,
-            "last_update": "2024-10"
+            "image_maintained": false,
+            "last_update": "2024-05"
           },
           "earnings": {
             "model": "per-GB",
@@ -718,7 +718,7 @@
             "https://spide.network/become-a-peer.html",
             "https://github.com/XternA/income-generator/issues/132"
           ],
-          "last_verified": "2026-03-23",
+          "last_verified": "2026-11-20",
           "warnings": [
             "Client connection fails."
           ]
