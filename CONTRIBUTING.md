@@ -41,6 +41,8 @@ Add your referral link to the entry's `referrals[]` pool:
 ]
 ```
 
+If a provider requires a manual referral code, add `"code": "YOURCODE"` to the same referral object. Use the official signup page as `url` when there is no referral URL. Money4Band shows the code beside the link. Preserve known codes and historical referral links when archiving entries.
+
 Links are picked by weighted rotation driven by
 `scripts/compute_weights.py` in M4B core — the more you contribute
 across any of the three repos, the more weight your link carries.
