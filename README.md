@@ -6,9 +6,13 @@
 
 [**🚀 Enable the community catalog**](#getting-started) · [📚 Documentation](#documentation) · [🫶 Support](#support)
 
-**Leave a star ⭐ if you like this project 🙂 Thank you!**
+<p align="center">
+  <strong>Leave a star ⭐ if you like this project 🙂 Thank you!</strong>
+</p>
 
-## Overview
+<a name="overview"></a>
+
+## 🔍 Overview
 
 Community-maintained catalog of apps and addons for
 [Money4Band (M4B)](https://github.com/MRColorR/money4band). It contains entries that
@@ -22,11 +26,15 @@ This repo is one of three M4B catalog sources:
 | **`MRColorR/money4band-community-catalog`** (this repo) | Community apps + auto-claim addons (opt-in remote source) |
 | [`MRColorR/openpassivehub-catalog`](https://github.com/MRColorR/openpassivehub-catalog) | Broad public ecosystem directory (informational) |
 
-## Getting started
+<a name="getting-started"></a>
+
+## 🚥 Getting started
 
 Review the repository files and the project-specific documentation below before configuring the project for your environment.
 
-## Documentation
+<a name="documentation"></a>
+
+## 📚 Documentation
 
 <a name="layout"></a>
 
@@ -79,13 +87,17 @@ personal device. The provider prohibits running it in Docker.
 [EarnApp installation instructions](https://help.earnapp.com/hc/en-us/articles/10261224561553-Installation-instructions-and-hardware-software-requirements)
 [EarnApp Docker policy](https://help.earnapp.com/hc/en-us/articles/10199416541969--Can-I-install-EarnApp-on-Hosting-Services-Virtual-Machines-or-Dockers)
 
-## Contributing
+<a name="contributing"></a>
+
+## 🤝 Contributing
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 Please include enough context to reproduce a problem or review a change.
 
-## Support
+<a name="support"></a>
+
+## 🫶 Support
 
 **🫶 Support the project**
 
@@ -95,6 +107,8 @@ Your contributions are vital in helping to sustain the development of open-sourc
 
 Thank you for helping me keep building and sharing! 🙏 See the [supporter directory](https://github.com/MRColorR/MRColorR/blob/main/SUPPORTERS.md).
 
-## License
+<a name="license"></a>
+
+## 📄 License
 
 GPL-3.0
